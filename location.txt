@@ -1,0 +1,4 @@
+http://maps.googleapis.com/maps/api/staticmap?center=M%C3%A6kjug%C3%B8ta%208,%20T%C3%B3rshavn,%20Faroe%20Islands&zoom=14&format=gif&scale=2&size=640x320&sensor=false&markers=color:red%7Clabel:C%7C62.02316,-6.79244&visual_refresh=true&key=AIzaSyD6perM59r0dntxySQmrpb1fH3unPJ5hLk
+
+
+Get lat/lng http://universimmedia.pagesperso-orange.fr/geo/loc.htm

@@ -1,0 +1,588 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<style>
+body{
+  margin: 0;
+  min-width: 980px;
+  padding: 0;
+}
+.story{
+  margin: 0 auto;
+  min-width: 980px;
+  overflow: auto;
+  width: 980px;
+}
+.story .float-left, .story .float-right{
+  padding: 100px 0 0 0;
+  position: relative;
+  width: 350px;
+}
+
+#parallaxSignUp {
+  background:url("img/bg2.jpg") 0% 0 no-repeat fixed;
+  background-size:100% 100%;
+  position:relative;
+  height: 754px;
+  margin: 0 auto;
+  padding: 0;
+}
+#parallaxSignUp h1 {
+  font-size: 150px;
+  color: #fff;
+}
+#carouselTextLead {
+  color: #252525;
+  font-size: 25px;
+}
+#parallaxSignUpBottom {
+  background:url("img/bg2.jpg") 0% 0 no-repeat fixed;
+  background-size:100% 100%;
+  position:relative;
+  height: 754px;
+  margin: 0 auto;
+  padding: 0;
+}
+#parallaxSignUpBottom h1 {
+  font-size: 100px;
+}
+
+#parallaxMoreInfoBelow {
+  background:url("img/bg2.jpg") 0% 0 no-repeat fixed;
+  background-size:100% 100%;
+  position:relative;
+  height: 754px;
+  margin: 0 auto;
+  padding: 0;
+}
+#parallaxMoreInfoBelow .inner {
+  position:absolute; width:100%; height:100%;
+  padding-top: 50px;
+  z-index: 100000;
+  opacity: 1.0; /* opacity [0-1] */
+    -moz-opacity: 1.0; /* opacity [0-1] */
+    -webkit-opacity: 1.0; /* opacity [0-1] */
+}
+#parallaxMoreInfoBelow h1 {
+  color: #fff;
+}
+#parallaxMoreInfoBelow .cover {
+  position:absolute; width:100%; height:100%;
+  background-color: #252525;
+  z-index: 99999;
+  opacity: 0.5; /* opacity [0-1] */
+    -moz-opacity: 0.5; /* opacity [0-1] */
+    -webkit-opacity: 0.5; /* opacity [0-1] */
+}
+
+.carouselSpacer {
+  padding: 10px;
+}
+
+#register-form-container .control-label {
+  color: #fff;
+}
+#bottom-footer {
+  position: absolute;
+  bottom: 0px;
+  height: 200px;
+  width: 100%;
+  background-color: #252525;
+  opacity: 0.5; /* opacity [0-1] */
+    -moz-opacity: 0.5; /* opacity [0-1] */
+    -webkit-opacity: 0.5; /* opacity [0-1] */
+}
+#register-form {
+  position: absolute;
+}
+
+/*#sign-up-container {
+  height: 600px;
+}*/
+
+.hide {
+  display: none;
+}
+
+.feature-scroller {
+  /*background-color: #252525;*/
+}
+.feature-scroller .inner {
+  padding-top: 200px;
+  display: none;
+}
+.feature-scroller h1, p {
+  color: #252525;
+}
+.feature-scroller p {
+  font-size: 35px;
+}
+.feature-scroller i {
+  color: #FF6600;
+}
+
+#log {
+  position: fixed;
+  top:0;
+  left:0;
+  background-color:yellow;
+  color:red;
+  z-index:999999;
+  display: none;
+}
+#bottom {
+  position: fixed;
+  bottom:0;
+  left:0;
+  background-color:red;
+  z-index:999999;
+  display:none;
+}
+
+.carousel-caption {
+  background-color: transparent;
+  position: static;
+  max-width: 550px;
+  padding: 0 20px;
+  margin-top: 200px;
+
+}
+.carousel-caption h1,
+.carousel-caption .lead {
+  margin: 0;
+  line-height: 1.25;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+.carousel-caption .btn {
+  margin-top: 10px;
+}
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+.featurette {
+  padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+  overflow: hidden; /* Vertically center images part 2: clear their floats. */
+}
+.featurette-image {
+  margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+}
+
+/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+.featurette-image.pull-left {
+  margin-right: 40px;
+}
+.featurette-image.pull-right {
+  margin-left: 40px;
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  color: #fff;
+  font-size: 100px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+</style>
+
+<div id="log">log</div>
+<div id="bottom">bottom</div>
+
+<div id="parallaxSignUp" class="hide">
+  <div class="story">
+    <div class="carousel-inner">
+      <div class="">
+        <div class="">
+          <div class="carousel-caption">
+            <h1 class="carouselHeader">product name</h1>
+            <div class="carouselSpacer"></div>
+            <p id="carouselTextLead" class="lead carouselTextLead">tag line</p>
+            <br />
+            <a id="register-account" href="#register-form-container" class="btn btn-xxlarge btn-primary carouselSignupButton">sign up <i class="icon-arrow-right icon-large"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="parallaxMoreInfoBelow">
+  <div class="cover"></div>
+  <div class="inner">
+    <div class="container">
+      <h1>Scroll down for more information about Ephafes!</h1>
+    </div>
+  </div>
+</div>
+
+
+<i class="icon-film"></i>&nbsp;&nbsp;&nbsp;<?php echo getSystemLang('quickIntro'); ?>
+<div id="introVideo" style="display:none;">
+  <video id="introVideo" style="z-index:1;" class="video-js vjs-default-skin" width="480" height="320" data-setup='{"controls": true, "autoplay": false, "preload": "metadata"}'>
+  <!--poster="[some-image.jpg]"-->
+  <source src="http://video-js.zencoder.com/oceans-clip.mp4" type="video/mp4" />
+  <source src="http://video-js.zencoder.com/oceans-clip.webm" type="video/webm" />
+  <source src="http://video-js.zencoder.com/oceans-clip.ogv" type="video/ogg" />
+  <track kind="subtitles" src="<?php echo $GLOBALS['urlUserPlugins']; ?>/video.js/captions.vtt" srclang="en" label="English" />
+  <!--<object width="560" height="315"><param name="movie" value="http://www.youtube.com/v/yhpC3uq6M7E?version=3&amp;hl=en_US&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/yhpC3uq6M7E?version=3&amp;hl=en_US&amp;rel=0" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed></object>-->
+  </video>
+</div>
+<script>
+$(function() {
+  if(Modernizr.video || swfobject.getFlashPlayerVersion().major > 0) {
+    $('#introVideo').show();
+  } else {
+    $.get('<?php echo $GLOBALS['urlSystem']; ?>/views/helpers/no.flash.message.tpl.php', function(data){ $('#introVideo').html(data); });
+  }
+});
+</script>
+
+
+<div id="marketing-container" class="container">
+
+  <div>
+
+    <div class="marketing">
+
+      <div id="1" class="featurette feature-scroller">
+        <div class="container">
+          <div class="inner pull-right">
+            <h1 class="featurette-heading">
+              <?php echo getThemeLang('decentralizedTitle', true); ?> <i class="icon-asterisk icon-large"></i> <span class="muted"></span>
+            </h1>
+            <p class="lead"><?php echo getThemeLang('decentralizeText', true); ?></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <hr class="featurette-divider">
+      </div>
+
+      <div id="2" class="featurette feature-scroller">
+        <div class="container">
+          <div class="inner">
+            <h1 class="featurette-heading">
+              <i class="icon-road icon-large"></i> <?php echo getThemeLang('fastTitle', true); ?> <span class="muted"></span>
+            </h1>
+            <p class="lead"><?php echo getThemeLang('fastText', true); ?></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <hr class="featurette-divider">
+      </div>
+
+      <div id="3" class="featurette feature-scroller">
+        <div class="container">
+          <div class="inner pull-right">
+            <h1 class="featurette-heading">
+              <?php echo getThemeLang('compatibilityTitle', true); ?> <i class="icon-ok icon-large"></i> <span class="muted"></span>
+            </h1>
+            <p class="lead"><?php echo getThemeLang('compatibilityText', true); ?></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <hr class="featurette-divider">
+      </div>
+
+      <div id="4" class="featurette feature-scroller">
+        <div class="container">
+          <div class="inner">
+            <h1 class="featurette-heading">
+              <i class="icon-gift icon-large"></i> <?php echo getThemeLang('freeTitle', true); ?> <span class="muted"></span>
+            </h1>
+            <p class="lead"><?php echo getThemeLang('freeText', true); ?></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <hr class="featurette-divider">
+      </div>
+
+      <div id="5" class="featurette feature-scroller">
+        <div class="container">
+          <div class="inner pull-right">
+            <h1 class="featurette-heading">
+              <?php echo getThemeLang('synchronizedTitle', true); ?> <i class="icon-asterisk icon-large"></i> <span class="muted"></span>
+            </h1>
+            <p class="lead"><?php echo getThemeLang('synchronizedText', true); ?></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <hr class="featurette-divider">
+      </div>
+
+      <div id="6" class="featurette feature-scroller">
+        <div class="container">
+          <div class="inner">
+            <h1 class="featurette-heading">
+              <i class="icon-road icon-large"></i> <?php echo getThemeLang('privacyTitle', true); ?> <span class="muted"></span>
+            </h1>
+            <p class="lead"><?php echo getThemeLang('privacyText', true); ?></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <hr class="featurette-divider">
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div id="parallaxSignUpBottom" class="">
+ <div id="register-form-container" class="container">
+
+    <form class="form-horizontal" id="register-form" action="#">
+      <fieldset>
+        <div class="control-group">
+          <label class="control-label">
+            <?php echo getSystemLang('name', true); ?>:
+          </label>
+          <div class="controls">
+            <input type="text" class="input-xlarge" id="user-register-name" placeholder="<?php echo getSystemLang('fullName', false); ?>">
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">
+            <?php echo getSystemLang('email', true); ?>:
+          </label>
+          <div class="controls">
+            <input type="text" class="input-xlarge" id="user-register-email" placeholder="<?php echo getSystemLang('email', true); ?>">
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">
+            <?php echo getSystemLang('password', true); ?>:
+          </label>
+          <div class="controls">
+            <input type="password" class="input-xlarge" id="user-register-password" placeholder="<?php echo getSystemLang('password', true); ?>">
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">
+
+          </label>
+          <div class="controls">
+            <a href="javascript:void(0)" class="btn btn-primary btn-xxlarge" id="user-register"> <?php echo getSystemLang('createAccount', false); ?></a>
+            <div id="message"></div>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <div id="bottom-footer"></div>
+</div>
+
+
+
+<script>
+$(function() {
+
+  //.parallax(xPosition, speedFactor, outerHeight) options:
+  //xPosition - Horizontal position of the element
+  //inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+  //outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+  //$('#nav').localScroll(800);
+
+  var slideDownSpeed = 1000;
+  $('.footer-container, .push').hide();
+  $("#parallaxSignUp .carouselHeader, .carouselTextLead, .carouselSignupButton").hide();
+  $('#parallaxSignUp').css('height', window.innerHeight);
+  $('#parallaxMoreInfoBelow').hide();
+  $('#parallaxMoreInfoBelow h1').hide();
+  $("#parallaxSignUp")
+    .delay(slideDownSpeed/4)
+    //.show('highlight', null, 500, null)
+    .fadeIn(1.5*slideDownSpeed, function() {
+      var parentId = "#" + this.id;
+      $(parentId + " .carouselHeader")
+        .delay(slideDownSpeed/2)
+        .show('clip', null, slideDownSpeed, function() {
+        //.slideDown(1000, function() {
+          $(parentId + " .carouselTextLead").hide().delay(slideDownSpeed/4).fadeIn(slideDownSpeed, function() {
+            //$("#" + divIdSecond + " .carouselHeader").slideDown(1000);
+            $(parentId + " .carouselSignupButton").delay(slideDownSpeed/8).fadeIn(slideDownSpeed, function() {
+              /*$("#marketing-container").slideDown(2*slideDownSpeed, function() {
+                //$('.footer-container').hide().show();
+              });*/
+              $("#register-form-container").show('clip', null, slideDownSpeed, function() {
+                SetupScrollToSignUp();
+                SetupFeatureScroller();
+                $("#parallaxSignUpBottom").css('height', window.innerHeight).parallax("50%", 0.5);
+                $("#register-form").css('bottom', window.innerHeight/3);
+                $("#bottom-footer").css('height', window.innerHeight/8);
+                //$('#parallaxMoreInfoBelow h1').slideDown(slideDownSpeed/2);
+                //$('#parallaxMoreInfoBelow').parallax();
+              });
+            });
+          });
+        });
+    }).parallax("50%", 0.3);
+
+
+
+  //$('.myCarousel').carousel();
+
+  //$('body').css('height', 10000);
+
+  /*$("#parallaxSignUp").slideDown(500, function() {
+    $('#secondDiv').slideDown(500).parallax("100%", 5.0);
+  }).parallax("100%", 0.3);*/
+});
+
+function SetupScrollToSignUp() {
+  //https://github.com/kswedberg/jquery-smooth-scroll
+  $(document)
+    //.on('click', 'a[href*="#"]', function() {
+    .on('click', '#register-account', function() {
+      if ( this.hash ) {
+        $.bbq.pushState( '#/' + this.hash.slice(1) );
+        return false;
+      }
+    })
+    .ready(function() {
+      $(window).bind('hashchange', function(event) {
+        var tgt = location.hash.replace(/^#\/?/,'');
+        if ( document.getElementById(tgt) ) {
+          $.smoothScroll({scrollTarget: '#' + tgt, speed:1500});
+        }
+      });
+
+      $(window).trigger('hashchange');
+    });
+}
+
+var lastPosY = -1;
+var isFeatureDisplayed = false;
+var lastFeatureId = 0;
+var currentFeatureIndex = 0;
+var scrollDirection;
+var features = [];
+
+function SetupFeatureScroller() {
+  //$('#feature-scroller-container .feature-scroller').each(function(i,v) {
+  $('#marketing-container .feature-scroller').each(function(i,v) {
+    var mult = i + 1;
+    //console.log(mult);
+    //var id = new Date();
+    //id = new Date().getMilliseconds() * Math.random();
+    //console.log(id);
+    //$(this).attr('id', id);
+    //$(this).find('.inner').hide();
+    //$(this).css('background-color', getRandomHexValue());
+    $(this).css('height', window.innerHeight/2);
+    var id = v.id;
+    var from = $(this).position().top;// - window.innerHeight/2;
+
+    features[i] = {
+      "id": id,
+      "from": from
+    };
+  });
+
+  $(window).scroll($.debounce(0, true, function() {
+      var slideDownSpeed = 500;
+      var p = $("#bottom");
+      var posY = p.position().top;
+      var feature = features[currentFeatureIndex];
+
+
+      if(posY > $("#parallaxSignUp").height()) {
+        $('.navbar').slideUp(250);
+      }
+      else {
+        $('.navbar').slideDown(250);
+      }
+
+
+
+
+
+      // Inrement
+      if(currentFeatureIndex < features.length-1 && posY > feature.from) {//} && feature.id !== lastFeatureId) {//}  && posY <= (feature.from + window.innerHeight/2) ) {
+      //if(feature.id !== lastFeatureId && feature.id < features.length && posY > feature.from) {
+        lastFeatureId = currentFeatureIndex;
+        currentFeatureIndex++;
+        feature = features[currentFeatureIndex];
+        lastPosY = posY;
+        isFeatureDisplayed = false;
+        //$("#" + feature.id + " .inner").slideDown(slideDownSpeed);
+        scrollDirection = 'down';
+        var item = $("#" + feature.id + " .inner");
+        if(item.is(":visible")) {
+          item.hide(slideDownSpeed);
+        }
+        else {
+          item.show('drop', null, slideDownSpeed);
+        }
+
+      }
+      // Decrement
+      else if(currentFeatureIndex > 0 && posY <= features[lastFeatureId].from && posY <= lastPosY) {//} && currentFeatureIndex !== lastFeatureId) {
+      //if(feature.id !== lastFeatureId && feature.id > 0 && posY < feature.from) {
+        console.log(currentFeatureIndex);
+        lastFeatureId = currentFeatureIndex;
+        currentFeatureIndex--;
+        feature = features[currentFeatureIndex];
+        lastPosY = posY;
+        isFeatureDisplayed = false;
+        scrollDirection = 'up';
+        var item = $("#" + feature.id + " .inner");
+        if(item.is(":visible")) {
+          item.hide(slideDownSpeed);
+        }
+        else {
+          item.show('drop', null, slideDownSpeed);
+        }
+      }
+      $('#log').show().html("lastFeatureId: " + lastFeatureId +
+                            ", currentFeatureIndex: " + currentFeatureIndex +
+                            ", id: " + feature.id + " / " + features.length +
+                            ", position: " + posY +
+                            ", innerHeight: " + window.innerHeight +
+                            ", from: " + feature.from);
+
+
+
+      if(lastFeatureId !== currentFeatureIndex && !isFeatureDisplayed) {
+        //$('#log').show().html("direction: " + scrollDirection);
+      }
+
+      /*if(lastFeatureId !== currentFeatureIndex && !isFeatureDisplayed) {
+        feature = features[currentFeatureIndex];
+        isFeatureDisplayed = true;
+        //$('#log').show().html("you entered feature: " + feature.id);
+        if(scrollDirection === 'down') {
+          $("#" + feature.id + " .inner").show('drop', null, slideDownSpeed);
+        }
+        else if(scrollDirection === 'up') {
+          $("#" + feature.id + " .inner").slideUp(slideDownSpeed);
+        }
+      }*/
+      //$('#log').html('SCROLLING!');
+    }));
+  /*$(window).scroll($.debounce(250, function(){
+    $('#log').html('DONE!');
+  }));*/
+}
+</script>
+<script type="text/javascript" src="jQuery-Parallax/scripts/jquery.parallax-1.1.3.js"></script>
+<script type="text/javascript" src="jQuery-Parallax/scripts/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="jQuery-Parallax/scripts/jquery.scrollTo-1.4.2-min.js"></script>
