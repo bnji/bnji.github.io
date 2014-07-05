@@ -10,7 +10,7 @@
 {
 	"title":"Subscription Management System",
 	"description":"",
-	"location":"l1",
+	"location":"",
 	"images": [
 		"cityroute_1.gif"
 	]
@@ -18,15 +18,15 @@
 {
 	"title":"simplemvc.js",
 	"description":"",
-	"location":"l1",
+	"location":"",
 	"images": [
 		"simplemvc.gif"
 	]
 },
 {
 	"title":"Kindle Rss Feed Publisher",
-	"description":"",
-	"location":"",
+	"description":"Save your favorite news RSS feeds as HTML, MOBI or PDF format, which can be send to your Kindle account.",
+	"location":"http://goo.gl/1KWtUY",
 	"images": [
 		"kindlerssfeedpublisher1.gif",
 		"kindlerssfeedpublisher2.gif"

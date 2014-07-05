@@ -7,12 +7,37 @@
 @color1: #f3f4f5; // White "whitesmoke"
 @color2: #b3cf4f; // Green "darkkhaki"
 @color3: #d6231f; // Red "crimson"
+@colorBlack: #000;
 
 html,
 body {
   height: 100%;
   width: 100%;
 }
+
+a {
+  color: #e9190a;
+  text-decoration: none;
+  &:hover {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+a.link-noeffect {
+  color: #fff;
+  &:hover {
+    font-weight: normal;
+  }
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
  #sidebar-wrapper.affix-top {
     position: static;
@@ -124,6 +149,10 @@ body {
 
 /* Full Page Image Header Area */
 
+.copyright {
+  color: @color2;
+}
+
 .header {
   display: table;
   height: 78%;
@@ -145,6 +174,13 @@ body {
 
 .location {
   background-color: @color3;
+  .location-header {
+    color: @colorBlack;
+  }
+  p.location-intro {
+    font-family: @font2;
+    font-size: 20px;
+  }
 }
 .location p, .location h1 {
   color: @color1;
@@ -155,7 +191,7 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
-  background: url(../img/location2.gif) no-repeat center center fixed;
+  background: url(../img/location2.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -199,7 +235,7 @@ p {
 }
 .intro .lead {
   margin-top: 0px;
-  margin-left: -42px;
+
 }
 
 /* Services */
@@ -211,6 +247,9 @@ p {
   p.services-intro {
     font-family: @font2;
     font-size: 20px;
+  }
+  #services-header {
+    color: @colorBlack;
   }
 }
 
@@ -261,6 +300,13 @@ i.close-menu-icon {
 .projects {
   background-color: @color1;
   padding: 50px 0;
+  p.projects-intro {
+    font-family: @font2;
+    font-size: 20px;
+  }
+  #projects-header {
+    color: @color3;
+  }
 }
 
 .spacer {

@@ -4,6 +4,26 @@ body {
   height: 100%;
   width: 100%;
 }
+a {
+  color: #e9190a;
+  text-decoration: none;
+}
+a:hover {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+a.link-noeffect {
+  color: #fff;
+}
+a.link-noeffect:hover {
+  font-weight: normal;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 #sidebar-wrapper.affix-top {
   position: static;
   margin-top: 30px;
@@ -102,6 +122,9 @@ body {
   margin: 5px 5px 0 0;
 }
 /* Full Page Image Header Area */
+.copyright {
+  color: #b3cf4f;
+}
 .header {
   display: table;
   height: 78%;
@@ -123,6 +146,13 @@ body {
 .location {
   background-color: #d6231f;
 }
+.location .location-header {
+  color: #000000;
+}
+.location p.location-intro {
+  font-family: "Quicksand";
+  font-size: 20px;
+}
 .location p,
 .location h1 {
   color: #f3f4f5;
@@ -132,7 +162,7 @@ body {
   height: 100%;
   width: 100%;
   position: relative;
-  background: url(../img/location2.gif) no-repeat center center fixed;
+  background: url(../img/location2.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -171,7 +201,6 @@ p {
 }
 .intro .lead {
   margin-top: 0px;
-  margin-left: -42px;
 }
 /* Services */
 .services {
@@ -182,6 +211,9 @@ p {
 .services p.services-intro {
   font-family: "Quicksand";
   font-size: 20px;
+}
+.services #services-header {
+  color: #000000;
 }
 .service-item {
   margin-bottom: 15px;
@@ -222,6 +254,13 @@ i.close-menu-icon {
 .projects {
   background-color: #f3f4f5;
   padding: 50px 0;
+}
+.projects p.projects-intro {
+  font-family: "Quicksand";
+  font-size: 20px;
+}
+.projects #projects-header {
+  color: #d6231f;
 }
 .spacer {
   padding-bottom: 140px;
