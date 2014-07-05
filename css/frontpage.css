@@ -74,12 +74,12 @@ a.link-noeffect:hover {
   text-indent: 20px;
 }
 .sidebar-nav li a {
-  color: #f3f4f5;
+  color: #ffffff;
   display: block;
   text-decoration: none;
 }
 .sidebar-nav li a:hover {
-  color: #f3f4f5;
+  color: #ffffff;
   background: rgba(255, 255, 255, 0.2);
   text-decoration: none;
 }
@@ -99,7 +99,7 @@ a.link-noeffect:hover {
   color: #999999;
 }
 .sidebar-nav > .sidebar-brand a:hover {
-  color: #f3f4f5;
+  color: #ffffff;
   background: none;
 }
 #menu-toggle {
@@ -137,7 +137,7 @@ a.link-noeffect:hover {
   background-size: cover;
 }
 .header h1 {
-  color: #f3f4f5;
+  color: #ffffff;
   font-family: "Raleway", Verdana, serif;
   font-size-adjust: 0.40;
   font-weight: 700;
@@ -155,7 +155,7 @@ a.link-noeffect:hover {
 }
 .location p,
 .location h1 {
-  color: #f3f4f5;
+  color: #ffffff;
 }
 #geo-location {
   display: table;
@@ -172,7 +172,7 @@ a.link-noeffect:hover {
 .intro {
   padding-top: 100px;
   padding-bottom: 100px;
-  background-color: #f3f4f5;
+  background-color: #ffffff;
 }
 .intro h1 {
   font-family: "Quicksand", Verdana, serif;
@@ -206,7 +206,7 @@ p {
 .services {
   background: #b3cf4f;
   padding: 50px 0;
-  color: #f3f4f5;
+  color: #ffffff;
 }
 .services p.services-intro {
   font-family: "Quicksand";
@@ -219,7 +219,7 @@ p {
   margin-bottom: 15px;
 }
 i.service-icon {
-  border: 3px solid #f3f4f5;
+  border: 3px solid #ffffff;
   border-radius: 50%;
   display: inline-block;
   font-size: 56px;
@@ -233,14 +233,14 @@ i.service-icon:hover {
   font-size: 68px;
 }
 .icon-white {
-  color: #f3f4f5;
+  color: #ffffff;
 }
 i.close-menu-icon {
   font-size: 36px;
 }
 /* Callout */
 .callout {
-  color: #f3f4f5;
+  color: #ffffff;
   display: table;
   height: 400px;
   width: 100%;
@@ -252,7 +252,7 @@ i.close-menu-icon {
 }
 /* Projects */
 .projects {
-  background-color: #f3f4f5;
+  background-color: #ffffff;
   padding: 50px 0;
 }
 .projects p.projects-intro {
@@ -279,7 +279,7 @@ i.close-menu-icon {
 }
 /* Call to Action */
 .call-to-action {
-  color: #f3f4f5;
+  color: #ffffff;
   background: #0a5175;
   padding: 50px 0;
 }
@@ -292,7 +292,7 @@ footer {
   padding: 100px 0;
 }
 footer p {
-  color: #f3f4f5;
+  color: #ffffff;
   font-family: "Quicksand";
 }
 .text-justify {
