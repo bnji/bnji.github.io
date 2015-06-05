@@ -1,6 +1,6 @@
 [
 {
-	"title":"Skipast",
+	"title":"Skipast (Developed at KT Húsið)",
 	"description":"Reverse engineering of a 21 year old application and forward engineered into a modern web application using C# ASP.NET. Project took six months.",
 	"tags": "C#, ASP.NET",
 	"location": [
@@ -10,7 +10,7 @@
 		"skipast.png"
 	]
 },{
-	"title":"Bústaðir.fo application forms",
+	"title":"Bústaðir.fo application forms (Developed at KT Húsið)",
 	"description":"Bústaðir.fo application forms programmed C#, ASP.NET",
 	"tags": "C#, ASP.NET",
 	"location": [
@@ -81,7 +81,7 @@
 },
 {
 	"title":"Kindle Rss Feed Publisher",
-	"description":"Save your favorite news RSS feeds as HTML, MOBI or PDF format, which can be send to your Kindle account.",
+	"description":"Save your favorite news RSS feeds as HTML, MOBI or PDF format, which can be sent to your Kindle account.",
 	"tags": "C#",
 	"location": [
 		"http://goo.gl/1KWtUY"
@@ -123,6 +123,7 @@
 		"http://bitbucket.org/beha/primefinder"
 	],
 	"images": [
+		"missing-image-640x360.png"
 	]
 },
 {
@@ -134,6 +135,7 @@
 		"http://bitbucket.org/beha/gamefinder"
 	],
 	"images": [
+		"missing-image-640x360.png"
 	]
 },
 {
