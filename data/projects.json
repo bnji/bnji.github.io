@@ -1,26 +1,5 @@
 [
 {
-	"title":"Skipast (Developed at KT Húsið)",
-	"description":"Reverse engineering of a 21 year old application and forward engineered into a modern web application using C# ASP.NET. Project took six months.",
-	"tags": "C#, ASP.NET",
-	"location": [
-
-	],
-	"images": [
-		"skipast.png"
-	]
-},{
-	"title":"Bústaðir.fo application forms (Developed at KT Húsið)",
-	"description":"Bústaðir.fo application forms programmed C#, ASP.NET",
-	"tags": "C#, ASP.NET",
-	"location": [
-		"http://form.bustadir.fo"
-	],
-	"images": [
-		"form.bustadir.png"
-	]
-},
-{
 	"title":"simplemvc.js",
 	"description":"A simple - yet solving a complex task while being lightweight - MVC / MVVM solution to your jQuery + HTML apps/websites.",
 	"tags": "JavaScript, jQuery",
