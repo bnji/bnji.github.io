@@ -62,7 +62,8 @@ var Bendot = {
     var obj = $('#project-template').ModelView({
       title: val['title'],
       description: val['description'],
-      location: val['location']
+      tags: val['tags']
+      // location: val['location']
     }, {
         controller: MVC.Controller({ }),
         clone: {
@@ -79,11 +80,17 @@ var Bendot = {
     console.log(obj.Get('description'));
     $(obj.GetViewId() + " #title").html(obj.Get('title'));
     $(obj.GetViewId() + " #description").html(obj.Get('description'));
+    $(obj.GetViewId() + " #tags").html(obj.Get('tags'));
     $(obj.GetViewId() + " a").attr('href', obj.Get('location')).text(obj.Get('location'));
 
     $.each(val['images'], function(key2, val2) {
       var img = $('<img />').addClass('img-projects').addClass('img-responsive').attr('src', 'img/projects/' + val2);
       $(obj.GetViewId() + " .projects-item").append(img).append("<br />");
-    })
+    });
+
+    $.each(val['location'], function(key3, val3) {
+      var loc = $('<a />').attr('href', val3).text(val3);
+      $(obj.GetViewId() + " .project-locations").append(loc).append("<br />");
+    });
   }
 }

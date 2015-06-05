@@ -1,32 +1,80 @@
 [
 {
-	"title":"City Route",
-	"description":"",
-	"location":"l1",
+	"title":"Bústaðir.fo application forms",
+	"description":"Bústaðir.fo application forms programmed C#, ASP.NET",
+	"tags": "C#, ASP.NET",
+	"location": [
+		"http://form.bustadir.fo"
+	],
 	"images": [
-		"cityroute_1.gif"
-	]
-},
-{
-	"title":"Subscription Management System",
-	"description":"",
-	"location":"",
-	"images": [
-		"cityroute_1.gif"
+		"form.bustadir.png"
 	]
 },
 {
 	"title":"simplemvc.js",
-	"description":"",
-	"location":"",
+	"description":"A simple - yet solving a complex task while being lightweight - MVC / MVVM solution to your jQuery + HTML apps/websites.",
+	"tags": "JavaScript, jQuery",
+	"location": [
+		"http://github.com/bnji/simplemvc"
+	],
 	"images": [
 		"simplemvc.gif"
 	]
 },
 {
+	"title":"Restless Honey Seeker",
+	"description":"Remote Access Tool developed in C#",
+	"tags": "C#",
+	"location": [
+		"http://github.com/bnji/RestlessHoneySeeker",
+		"https://www.youtube.com/watch?v=K1roV3RT0Ak"
+	],
+	"images": [
+		"restlesshoneyseeker.png"
+	]
+},
+{
+	"title":"Sprotin Chrome Web Extension",
+	"description":"Sprotin.fo Dictionaries makes it faster and more convenient to translate words while simultaneously browsing the web. This chrome extension makes use of the free dictionaries provided by Sprotin (http://www.sprotin.fo).",
+	"tags": "Chrome, JavaScript",
+	"location": [
+		"https://chrome.google.com/webstore/detail/sprotinfo-dictionaries/bdiolhfpaocjkjalaocjaacpbpgdcagj",
+		"http://github.com/bnji/sprotin-chrome-extension"
+	],
+	"images": [
+		"sprotin.fo.png"
+	]
+},
+{
+	"title":"Calcnotify Chrome Web Extension",
+	"description":"Let your notes do the calculations for you - Do you often take notes, write to-do or shopping lists? Do you often have a need keeping track of the individual items and their cost (including the total cost and amount of items)? If you can answer yes to both, then Calcnotify is for you!",
+	"tags": "Chrome, JavaScript",
+	"location": [
+		"https://chrome.google.com/webstore/detail/calcnotify/mgjjapldghfdppfhnmlfbfcojhgeogec"
+	],
+	"images": [
+		"calcnotify.chrome.plugin.png"
+	]
+},
+{
+	"title":"Page Ranker",
+	"description":"Simple Web Crawler built with .NET C# as a part of my study. It also includes a simple demonstration of how PageRanking works.",
+	"tags": "C#",
+	"location": [
+		"http://github.com/bnji/PageRanker"
+	],
+	"images": [
+		"PageRankWpfGui.png",
+		"PageRankConsole.png"
+	]
+},
+{
 	"title":"Kindle Rss Feed Publisher",
 	"description":"Save your favorite news RSS feeds as HTML, MOBI or PDF format, which can be send to your Kindle account.",
-	"location":"http://goo.gl/1KWtUY",
+	"tags": "C#",
+	"location": [
+		"http://goo.gl/1KWtUY"
+	],
 	"images": [
 		"kindlerssfeedpublisher1.gif",
 		"kindlerssfeedpublisher2.gif"
@@ -34,24 +82,54 @@
 },
 {
 	"title":"CodeWithMe",
-	"description":"",
-	"location":"",
+	"description":"Let other people see while you're coding in Visual Studio (alpha version)",
+	"tags": "C#, Visual Studio",
+	"location": [
+		"http://github.com/bnji/CodeWithMeVSAddin"
+	],
 	"images": [
 		"codewithme1.gif"
 	]
 },
 {
-	"title":"GameFinder",
-	"description":"",
-	"location":"",
+	"title":"CubeClimber",
+	"description":"A simple game made in Unity3D which only goal is to climb cubes and reach the top. It's currently in development and therefore not yet finished.",
+	"tags": "Unity3D, C#, JavaScript",
+	"location": [
+		"http://github.com/bnji/CubeClimber"
+	],
 	"images": [
-		"cityroute_1.gif"
+		"cubeclimber.png"
+	]
+},
+{
+	"title":"PrimeFinder",
+	"description": "An implementation of Sieve of Eratosthenes simple, yet fast and ancient algorithm for finding all prime numbers up to any given limit.",
+	"tags": "Java",
+	"location": [
+		"http://bitbucket.org/beha/primefinder"
+	],
+	"images": [
+	]
+},
+{
+	"title":"GameFinder",
+	"description":"Find other games (currently only Counter Strike) on your LAN (Local Area Network).",
+	"tags": "Java",
+	"tags": "Java",
+	"location": [
+		"http://bitbucket.org/beha/gamefinder"
+	],
+	"images": [
 	]
 },
 {
 	"title":"Pathfinding",
+	"tags": "C++",
 	"description":"",
-	"location":"",
+	"location": [
+		""
+	],
 	"images": [
 		"cityroute_1.gif"
 	]

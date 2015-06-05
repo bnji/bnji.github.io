@@ -125,23 +125,45 @@ a.link-noeffect:hover {
 .copyright {
   color: #b3cf4f;
 }
-.header {
-  display: table;
-  height: 78%;
-  width: 100%;
-  position: relative;
-  background: url(../img/bg6.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+@media (min-width: 600px) {
+  .header {
+    display: table;
+    height: 60%;
+    width: 100%;
+    position: relative;
+    background: url(../img/bg6.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .header h1 {
+    color: #ffffff;
+    font-family: "Raleway", Verdana, serif;
+    font-size-adjust: 0.40;
+    font-weight: 700;
+    font-style: normal;
+  }
 }
-.header h1 {
-  color: #ffffff;
-  font-family: "Raleway", Verdana, serif;
-  font-size-adjust: 0.40;
-  font-weight: 700;
-  font-style: normal;
+@media (max-width: 600px) {
+  .header {
+    display: table;
+    height: 60%;
+    width: 100%;
+    position: relative;
+    background: url(../img/bg6_mobile.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .header h1 {
+    color: #ffffff;
+    font-family: "Raleway", Verdana, serif;
+    font-size-adjust: 0.40;
+    font-weight: 700;
+    font-style: normal;
+  }
 }
 .location {
   background-color: #d6231f;
@@ -156,6 +178,20 @@ a.link-noeffect:hover {
 .location p,
 .location h1 {
   color: #ffffff;
+}
+.about {
+  background-color: #ffffff;
+}
+.about .about-header {
+  color: #d6231f;
+}
+.about p.about-intro {
+  font-family: "Quicksand";
+  font-size: 20px;
+}
+.about p,
+.about h1 {
+  color: #000000;
 }
 #geo-location {
   display: table;
@@ -218,6 +254,17 @@ p {
 .service-item {
   margin-bottom: 15px;
 }
+i.service-icon-small {
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  line-height: 20px;
+  vertical-align: middle;
+  text-align: center;
+}
 i.service-icon {
   border: 3px solid #ffffff;
   border-radius: 50%;
@@ -260,13 +307,13 @@ i.close-menu-icon {
   font-size: 20px;
 }
 .projects #projects-header {
-  color: #d6231f;
+  color: #b3cf4f;
 }
 .spacer {
   padding-bottom: 140px;
 }
 .projects-row {
-  margin-top: 300px;
+  margin-top: 150px;
 }
 .projects-item {
   margin-bottom: 25px;
