@@ -1,5 +1,15 @@
 [
 {
+	"title":"Skipast",
+	"description":"Reverse engineering of a 21 year old application and forward engineered into a modern web application using C# ASP.NET. Project took six months.",
+	"tags": "C#, ASP.NET",
+	"location": [
+
+	],
+	"images": [
+		"skipast.png"
+	]
+},{
 	"title":"Bústaðir.fo application forms",
 	"description":"Bústaðir.fo application forms programmed C#, ASP.NET",
 	"tags": "C#, ASP.NET",
@@ -53,7 +63,8 @@
 		"https://chrome.google.com/webstore/detail/calcnotify/mgjjapldghfdppfhnmlfbfcojhgeogec"
 	],
 	"images": [
-		"calcnotify.chrome.plugin.png"
+		"calcnotify.chrome.plugin.png",
+		"calcnotify.chrome.plugin2.png"
 	]
 },
 {
@@ -85,7 +96,8 @@
 	"description":"Let other people see while you're coding in Visual Studio (alpha version)",
 	"tags": "C#, Visual Studio",
 	"location": [
-		"http://github.com/bnji/CodeWithMeVSAddin"
+		"http://github.com/bnji/CodeWithMeVSAddin",
+		"http://www.youtube.com/watch?v=nFak4gR61mQ"
 	],
 	"images": [
 		"codewithme1.gif"
@@ -93,10 +105,11 @@
 },
 {
 	"title":"CubeClimber",
-	"description":"A simple game made in Unity3D which only goal is to climb cubes and reach the top. It's currently in development and therefore not yet finished.",
+	"description":"A simple game made in Unity3D which only goal is to climb cubes and reach the top. It's currently in development and therefore not yet finished.<br /><br />Use WASD and the mouse for movement. Use 'E' to build blocks.",
 	"tags": "Unity3D, C#, JavaScript",
 	"location": [
-		"http://github.com/bnji/CubeClimber"
+		"http://github.com/bnji/CubeClimber",
+		"https://dl.dropboxusercontent.com/u/196299/CubeClimber/CubeClimber/CubeClimber.html"
 	],
 	"images": [
 		"cubeclimber.png"
@@ -126,12 +139,13 @@
 {
 	"title":"Pathfinding",
 	"tags": "C++",
-	"description":"",
+	"description":"Simple implementation of Motion Planning and A* Pathfinding algorithms.",
 	"location": [
-		""
+		"http://www.youtube.com/watch?v=ZhER21xMLEY",
+		"http://www.youtube.com/watch?v=z8F_GJl0dkE"
 	],
 	"images": [
-		"cityroute_1.gif"
+		"pathfinding1.png"
 	]
 }
 ]
