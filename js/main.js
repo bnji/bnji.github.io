@@ -76,8 +76,8 @@ var Bendot = {
         }
     });
     //obj.Set('description', 'foobar');
-    console.log(obj['title']);
-    console.log(obj.Get('description'));
+    // console.log(obj['title']);
+    // console.log(obj.Get('description'));
     $(obj.GetViewId() + " #title").html(obj.Get('title'));
     $(obj.GetViewId() + " #description").html(obj.Get('description'));
     $(obj.GetViewId() + " #tags").html(obj.Get('tags'));
@@ -90,7 +90,7 @@ var Bendot = {
 
     $.each(val['location'], function(key3, val3) {
       var loc = $('<a />').attr('href', val3).text(val3);
-      $(obj.GetViewId() + " .project-locations").append(loc).append("<br />");
+      $(obj.GetViewId() + " .project-locations").append(loc).append("<br /><br />");
     });
   }
 }

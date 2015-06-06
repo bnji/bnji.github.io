@@ -27,7 +27,7 @@
 	"description":"Sprotin.fo Dictionaries makes it faster and more convenient to translate words while simultaneously browsing the web. This chrome extension makes use of the free dictionaries provided by Sprotin (http://www.sprotin.fo).",
 	"tags": "Chrome, JavaScript",
 	"location": [
-		"https://chrome.google.com/webstore/detail/sprotinfo-dictionaries/bdiolhfpaocjkjalaocjaacpbpgdcagj",
+		"http://bit.ly/1RTHGCB",
 		"http://github.com/bnji/sprotin-chrome-extension"
 	],
 	"images": [
@@ -39,7 +39,7 @@
 	"description":"Let your notes do the calculations for you - Do you often take notes, write to-do or shopping lists? Do you often have a need keeping track of the individual items and their cost (including the total cost and amount of items)? If you can answer yes to both, then Calcnotify is for you!",
 	"tags": "Chrome, JavaScript",
 	"location": [
-		"https://chrome.google.com/webstore/detail/calcnotify/mgjjapldghfdppfhnmlfbfcojhgeogec"
+		"http://bit.ly/1HT5MpT"
 	],
 	"images": [
 		"calcnotify.chrome.plugin.png",
@@ -89,7 +89,7 @@
 	"tags": "Unity3D, C#, JavaScript",
 	"location": [
 		"http://github.com/bnji/CubeClimber",
-		"https://dl.dropboxusercontent.com/u/196299/CubeClimber/CubeClimber/CubeClimber.html"
+		"http://bit.ly/1Khn8Sj"
 	],
 	"images": [
 		"cubeclimber.png"
