@@ -71,10 +71,11 @@
 	]
 },
 {
-	"title":"CodeWithMe",
-	"description":"Let other people see while you're coding in Visual Studio (alpha version)",
-	"tags": "C#, Visual Studio",
+	"title":"Code With Me VS 2012 Extension",
+	"description":"Let other people see while you're coding in Visual Studio 2012.",
+	"tags": "PHP, C#, Visual Studio 2012",
 	"location": [
+		"http://github.com/bnji/CodeWithMe",
 		"http://github.com/bnji/CodeWithMeVSAddin",
 		"http://www.youtube.com/watch?v=nFak4gR61mQ"
 	],
