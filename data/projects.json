@@ -47,6 +47,7 @@
 		"https://www.youtube.com/watch?v=K1roV3RT0Ak"
 	],
 	"images": [
+		"restlesshoneyseekerV2.jpg",
 		"restlesshoneyseeker.png"
 	]
 },
@@ -110,7 +111,7 @@
 	]
 },
 {
-	"title":"Code With Me VS 2012 Extension",
+	"title":"Code With Me Visual Studio Extension",
 	"description":"Let other people see while you're coding in Visual Studio 2012.",
 	"tags": "PHP, C#, Visual Studio 2012",
 	"location": [

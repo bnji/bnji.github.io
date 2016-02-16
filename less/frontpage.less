@@ -9,10 +9,36 @@
 @color3: #d6231f; // Red "crimson"
 @colorBlack: #000;
 
-html,
-body {
+html, body {
   height: 100%;
   width: 100%;
+}
+
+#the-end-parent {
+  width: 100%;
+  height:1000px;
+  // background-color:blue;
+  display:table;
+}
+#the-end {
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+  text-transform: capitalize;
+  font-family: @font2;
+  font-size: 40px;
+  color: @colorBlack;
+  // background-color: red;
+}
+
+#projects-body .description {
+  font-family: @font2;
+  font-size: 20px;
+}
+
+.services-intro {
+  font-family: @font2;
+  font-size: 20px;
 }
 
 a {
@@ -325,6 +351,10 @@ i.service-icon:hover {
   color: @color1;
 }
 
+.icon-black {
+  color: @colorBlack;
+}
+
 i.close-menu-icon {
   font-size: 36px;
 }
@@ -348,13 +378,17 @@ i.close-menu-icon {
 .projects {
   background-color: @color1;
   padding: 25px 0;
-  p.projects-intro {
-    font-family: @font2;
-    font-size: 20px;
-  }
-  #projects-header {
-    color: @color2;
-  }
+  // p.projects-intro {
+  //   font-family: @font2;
+  //   font-size: 20px;
+  // }
+  // #projects-header {
+  //   color: @color2;
+  // }
+}
+
+.spacer-150px {
+  padding-bottom:150px;
 }
 
 .spacer {
@@ -362,7 +396,7 @@ i.close-menu-icon {
 }
 
 .projects-row {
-  margin-top:150px;
+  .spacer-150px();
 }
 
 .projects-item {

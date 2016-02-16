@@ -1,8 +1,24 @@
+var objects = [];
+var projects = [];
+var tags = [];
 $(function() {
+
+  $(document).on('click', '.filter', function() {
+    $('.filter').removeClass('btn-primary').addClass('btn-default');
+    $(this).removeClass('btn-default').addClass('btn-primary');
+    Bendot.show($(this).text());
+  });
+
+  // $("#load-first-project-waypoint").waypoint(function(direction) {
+  //   Bendot.clone(0);
+  // });
+
   $.getJSON('data/projects.json', function(data) {
+    projects = data;
     $.each(data, function(key, val) {
-      Bendot.clone(key, val);
+      Bendot.clone(key);
     });
+    console.log(tags);
     //console.log(data);
   }).done(function() {
     $('.header').parallax("50%", 0.3);
@@ -40,26 +56,31 @@ $(function() {
       }
     }
   });
-
-
   $('body').scrollspy({ target: '#sidebar', offset:0 });
-
-
   $('body').scrollspy({ target: '#sidebar-wrapper', offset:0 });
-
   $('body').on('activate.bs.scrollspy', function () {
     console.log('scrolling...');
    // if(!clicked)$('#sidebar-wrapper > ul > h2').css('padding-top',0);
     //clicked = false;
   });
 
-
-
 });
 
 var Bendot = {
-  clone : function(key, val) {
+  show : function(keyword) {
+    $.each(objects, function(k, v) {
+      var tags = v.Get('tags').trim().toLowerCase().split(',');//.split(/[\s,]+/);
+      v.Hide();
+      if(keyword.toLowerCase() === "all" || _.contains(tags, keyword.toLowerCase())) {
+        v.Show();
+      }
+    });
+  },
+  clone : function(key) {
+    if(key >= projects.length) return;
+    var val = projects[key];
     var obj = $('#project-template').ModelView({
+      canClone: true,
       title: val['title'],
       description: val['description'],
       tags: val['tags']
@@ -72,25 +93,58 @@ var Bendot = {
             append: function(elem) {
                 $('#projects-body').append(elem);
                 $(elem).show();
+                // $(elem).fadeIn('fast', function() {
+                //   $(this).waypoint(function(direction) {
+                //     if(obj.canClone && key < projects.length) {
+                //       console.log(key + " / " + projects.length);
+                //       key++;
+                //       setTimeout(function() {
+                //         Bendot.clone(key);
+                //       }, 100);
+                //     }
+                //     obj.canClone = false;
+                //   });
+                // });
             }
         }
+    }, {
+      Hide : function () {
+        $(obj.GetViewId()).fadeOut('fast');
+      },
+      Show : function () {
+        $(obj.GetViewId()).fadeIn('fast');
+      }
     });
-    //obj.Set('description', 'foobar');
+    //obj.Set('description', 'test');
     // console.log(obj['title']);
     // console.log(obj.Get('description'));
-    $(obj.GetViewId() + " #title").html(obj.Get('title'));
-    $(obj.GetViewId() + " #description").html(obj.Get('description'));
-    $(obj.GetViewId() + " #tags").html(obj.Get('tags'));
-    $(obj.GetViewId() + " a").attr('href', obj.Get('location')).text(obj.Get('location'));
+    var viewId = obj.GetViewId();
+    $(viewId + " #title").html(obj.Get('title'));
+    $(viewId + " .description").html(obj.Get('description'));
+    $(viewId + " #tags").html("Tags: <b>" + obj.Get('tags') + "</b>");
+    $(viewId + " a").attr('href', obj.Get('location')).text(obj.Get('location'));
 
-    $.each(val['images'], function(key2, val2) {
-      var img = $('<img />').addClass('img-projects').addClass('img-responsive').attr('src', 'img/projects/' + val2);
-      $(obj.GetViewId() + " .projects-item").append(img).append("<br />");
+    var objTags = obj.Get('tags').trim().split(',');
+    // console.log(objTags);
+    $.each(objTags, function(k,v) {
+      if(!_.contains(tags, v)){
+        tags.push(v);
+        $("<button />").addClass("filter btn btn-lg btn-default").text(v).appendTo('#project-tags');
+      }
+    });
+
+    $.each(val['images'], function(k, imageName) {
+      var imgHref = 'img/projects/' + imageName;
+      var lnk = $('<a />').attr('data-fancybox-group', 'gallery-' + viewId).addClass('fancybox').attr('href', imgHref);
+      var img = $('<img />').addClass('img-projects').addClass('img-responsive').attr('src', imgHref);
+      lnk.append(img);
+      $(viewId + " .projects-item").append(lnk).append("<br />");
     });
 
     $.each(val['location'], function(key3, val3) {
       var loc = $('<a />').attr('href', val3).text(val3);
-      $(obj.GetViewId() + " .project-locations").append(loc).append("<br /><br />");
+      $(viewId + " .project-locations").append(loc).append("<br /><br />");
     });
+    objects.push(obj);
   }
 }

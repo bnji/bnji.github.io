@@ -4,6 +4,28 @@ body {
   height: 100%;
   width: 100%;
 }
+#the-end-parent {
+  width: 100%;
+  height: 1000px;
+  display: table;
+}
+#the-end {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Quicksand";
+  font-size: 40px;
+  color: #000000;
+}
+#projects-body .description {
+  font-family: "Quicksand";
+  font-size: 20px;
+}
+.services-intro {
+  font-family: "Quicksand";
+  font-size: 20px;
+}
 a {
   color: #e9190a;
   text-decoration: none;
@@ -282,6 +304,9 @@ i.service-icon:hover {
 .icon-white {
   color: #ffffff;
 }
+.icon-black {
+  color: #000000;
+}
 i.close-menu-icon {
   font-size: 36px;
 }
@@ -302,18 +327,14 @@ i.close-menu-icon {
   background-color: #ffffff;
   padding: 25px 0;
 }
-.projects p.projects-intro {
-  font-family: "Quicksand";
-  font-size: 20px;
-}
-.projects #projects-header {
-  color: #b3cf4f;
+.spacer-150px {
+  padding-bottom: 150px;
 }
 .spacer {
   padding-bottom: 140px;
 }
 .projects-row {
-  margin-top: 150px;
+  padding-bottom: 150px;
 }
 .projects-item {
   margin-bottom: 25px;
