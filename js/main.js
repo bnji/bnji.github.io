@@ -1,7 +1,46 @@
 var objects = [];
 var projects = [];
 var tags = [];
+
 $(function() {
+
+  // function addScroll(name) {
+  //   var followScroll = $(name),
+  //     originalY = followScroll.offset().top;
+  //   // Space between element and top of screen (when scrolling)
+  //   var topMargin = 20;
+  //   $(window).on('scroll', function(event) {
+  //       var scrollTop = $(window).scrollTop();
+  //       // console.log(scrollTop + " - " + followScroll.offset().top);
+  //       followScroll.stop(false, false).animate({
+  //           top: scrollTop < originalY
+  //                   ? 0
+  //                   : scrollTop - originalY + topMargin
+  //       }, 30);
+  //   });
+  // }
+
+  // addScroll('.follow-scroll-1');
+  //
+  $('.follow-scroll').each(function() {
+    // $(this).affix({
+    //     offset: {
+    //         top: function(e) {
+    //             var $curSection = $(e).closest('.row');
+    //             return (this.top = $curSection.offset().top - 10);
+    //         },
+    //         bottom: function (e) {
+    //             var $nextSection = $(e).closest('section').next('section');
+    //             //if last element, go to bottom of page
+    //             var bottom = ($nextSection.length === 0) ? 0 :
+    //                          $(document).height() - $nextSection.offset().top;
+    //             return (this.bottom = bottom);
+    //         }
+    //     }
+    // });
+  });
+
+
 
   $(document).on('click', '.filter', function() {
     $('.filter').removeClass('btn-primary').addClass('btn-link');
