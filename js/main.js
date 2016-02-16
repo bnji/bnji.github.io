@@ -4,8 +4,8 @@ var tags = [];
 $(function() {
 
   $(document).on('click', '.filter', function() {
-    $('.filter').removeClass('btn-primary').addClass('btn-default');
-    $(this).removeClass('btn-default').addClass('btn-primary');
+    $('.filter').removeClass('btn-primary').addClass('btn-link');
+    $(this).removeClass('btn-link').addClass('btn-primary');
     Bendot.show($(this).text());
   });
 
@@ -18,7 +18,7 @@ $(function() {
     $.each(data, function(key, val) {
       Bendot.clone(key);
     });
-    console.log(tags);
+    // console.log(tags);
     //console.log(data);
   }).done(function() {
     $('.header').parallax("50%", 0.3);
@@ -125,11 +125,11 @@ var Bendot = {
     $(viewId + " a").attr('href', obj.Get('location')).text(obj.Get('location'));
 
     var objTags = obj.Get('tags').trim().split(', ');
-    console.log(objTags);
+    // console.log(objTags);
     $.each(objTags, function(k,v) {
       if(!_.contains(tags, v)){
         tags.push(v);
-        $("<button />").addClass("filter btn btn-lg btn-default").text(v).appendTo('#project-tags');
+        $("<button />").addClass("filter btn btn-lg btn-link").text(v).appendTo('#project-tags');
       }
     });
 

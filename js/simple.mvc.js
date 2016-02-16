@@ -115,6 +115,40 @@ var MVC = {
     };
 
     /**
+     * Get
+     *
+     * Get an element from the array.
+     *
+     * @method Get
+     * @param {Integer} A key.
+     * @return {Object} An object from the array.
+     */
+    array.Get = function(key) {
+      return array[key];
+    };
+
+    /**
+     * Find
+     *
+     * Find an element in the array.
+     *
+     * @method GetById
+     * @param {Object} A key.
+     * @param {Object} A value to search for.
+     * @return {Object} An object from the array.
+     */
+    array.Find = function(_key, _value) {
+      var result;
+      $.each(array, function(k,v) {
+        if(v[_key] === _value) {
+          result = v;
+          return false;
+        }
+      });
+      return result;
+    };
+
+    /**
      * Remove
      *
      * Remove an element (if found) from the array.
@@ -135,6 +169,30 @@ var MVC = {
         return true;
       }
       return false;
+    };
+
+    /**
+     * Contains
+     *
+     * Check if the specified element is in the list
+     *
+     * @method Contains
+     * @param {Object} An element.
+     */
+    array.Contains = function(element) {
+      return $.inArray(element, array) !== -1;
+    };
+
+    /**
+     * Clear
+     *
+     * Remove all the elements from the array.
+     *
+     * @method Clear
+     */
+    array.Clear = function() {
+      //array.splice(0, array.length);
+      array = [];
     };
     return array;
   },
@@ -219,6 +277,8 @@ var MVC = {
       }
       else {
         $object = $.extend({}, true, $object, $methods);
+        //$.extend($object, $settings, $methods);
+        //alert(JSON.stringify($object, null, 2));
       }
 
       //Make sure that the settings always exist and with certain properties.
@@ -234,7 +294,12 @@ var MVC = {
         //Set the clone template to be the view id
         clone['template'] = viewId;
         //Update the view id with the new clone id
-        viewId = '' + clone['id']; //Make sure it's a string
+        if(clone['id'] === undefined) {
+          viewId = "#" + $.now();
+        }
+        else {
+          viewId = '' + clone['id']; //Make sure it's a string
+        }
 
         //If the clone view id has hashtag specified
         if(viewId.substring(0, 1) === '#') {
@@ -263,6 +328,7 @@ var MVC = {
           //.find(viewId + ' li[datasrc=""]')
           .find('[datasrc=""]')
           .attr('datasrc', datasrc);
+
         //If the template originally was hidden using 'display: none;' - make it visible to the user
         //element.show();
         //Append the copy to the target
@@ -294,17 +360,19 @@ var MVC = {
       $(viewId + ' button,' + viewId + ' a,' + viewId + ' submit,' + viewId + ' i')
         //.find('button,a,submit,i')
         .each(function(i, e) {
-          $(this)
-          //.attr('id', e.id+'_'+viewId)//NoHash)
-          .click(function(e) {
-            //$object.Start($id, par);
-            //$object.Save();
-            //console.log(e.target.name);
-            $object.Start(e.target.name, e);
-            if($settings['settings']['preventDefault']) {
-              e.preventDefault();
-            }
-          });
+          if($(this).hasClass('isEvent')) {
+            $(this)
+            //.attr('id', e.id+'_'+viewId)//NoHash)
+            .click(function(e) {
+              //$object.Start($id, par);
+              //$object.Save();
+              //console.log(e.target.name);
+              $object.Start(e.target.name, e);
+              if($settings['settings']['preventDefault']) {
+                e.preventDefault();
+              }
+            });
+          }
           //console.log(i + " " + e.id);
         });
 
@@ -758,7 +826,8 @@ var MVC = {
         //$('[datasrc='+datasrc+'][name='+name+']').text(value).val(value);
         //This works though:
         //console.log(counter + " - datasrc: " + datasrc + " - name: " + name + " - value: " + value);
-        $('div[datasrc|='+datasrc+'][name|='+name+'],p[datasrc|='+datasrc+'][name|='+name+'],span[datasrc|='+datasrc+'][name|='+name+']').text(value);
+        //$('div[datasrc|='+datasrc+'][name|='+name+'],p[datasrc|='+datasrc+'][name|='+name+'],span[datasrc|='+datasrc+'][name|='+name+']').text(value);
+        $('*[datasrc|='+datasrc+'][name|='+name+']').text(value);
         $('input[datasrc|='+datasrc+'][name|='+name+']').val(value);
         //counter++;
         return $object;
@@ -810,7 +879,14 @@ var MVC = {
        * @return {Object} The object (itself)
        */
       $object.Start = function(method, par) {
-        var exec = $object['settings']['controller'][method];
+        var exec;
+        if($object['settings']['controller'] !== undefined) {
+          exec = $object['settings']['controller'][method];
+        }
+        if(exec === undefined) {
+          exec = $object[method];
+        }
+
         if(exec !== undefined && exec !== null) {
           exec(par);
         } else {
@@ -1067,18 +1143,22 @@ var MVC = {
       if(key === undefined) {
         key = $(element).attr("id");
       }
+      if(key === undefined) {
+        key = $(element).attr("data-bind");
+      }
       return key;
       //return $(element).attr("datafld") ? undefined : $(element).attr("id");
     },
-    getDivElements : function(target) {
-      return target.find('p,span,div').filter(':not(.excludeFromModel)');
+    getBindableElements : function(target) {
+      //return target.find('p,span,div').filter(':not(.excludeFromModel)');
+      return target.find('*[data-bind], *[datafld]').filter(':not(.excludeFromModel)');
     },
     setValues : function(params) {
       //console.log('setValues called!');
-      //console.log(this.getDivElements(this));
+      //console.log(this.getBindableElements(this));
       //Set the values for  'p', 'div' and 'span' elements
       var $this = this;
-      $this.getDivElements(this).each(function() {
+      $this.getBindableElements(this).each(function() {
         var key = $this.getElementKey(this);
         if(key === undefined) {
           return;
@@ -1157,7 +1237,7 @@ var MVC = {
         }
       });
 
-      $this.getDivElements(this).each(function() {
+      $this.getBindableElements(this).each(function() {
         var elem = $(this);
         var value = elem.text();
         if(value !== undefined) {

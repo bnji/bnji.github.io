@@ -228,7 +228,7 @@ a.link-noeffect:hover {
 }
 /* Intro */
 .intro {
-  padding-top: 100px;
+  padding-top: 25px;
   padding-bottom: 100px;
   background-color: #ffffff;
 }
@@ -250,9 +250,15 @@ h4 {
 p {
   font-family: "Merriweather";
 }
+.profile-picture {
+  width: 125px;
+  max-width: 125px;
+  padding-bottom: 15px;
+}
 .logo {
   width: 125px;
   max-width: 125px;
+  padding-bottom: 15px;
 }
 .dark {
   color: #201311;
@@ -311,17 +317,6 @@ i.close-menu-icon {
   font-size: 36px;
 }
 /* Callout */
-.callout {
-  color: #ffffff;
-  display: table;
-  height: 400px;
-  width: 100%;
-  background: url(../img/art1.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 /* Projects */
 .projects {
   background-color: #ffffff;
