@@ -1,7 +1,7 @@
 [
 {
 	"title":"Gravity Jumper",
-	"tags": "Android, IOS, Unity, C#, UnityScript",
+	"tags": "Android, IOS, Unity, C#, UnityScript, Games",
 	"description":"Jump between planets using gravity as your only weapon.",
 	"location": [
 		"https://play.google.com/store/apps/details?id=com.hammerbenjamin.GravityJumper",
@@ -15,7 +15,7 @@
 },
 {
 	"title":"Radiant Planet Defense",
-	"tags": "Android, Unity, C#, UnityScript",
+	"tags": "Android, Unity, C#, UnityScript, Games",
 	"description":"Defend your radiant planets in this causual and alternative planetary 'tower' defense game.",
 	"location": [
 		"https://play.google.com/store/apps/details?id=com.huldagames.RadiantPlanetDefense",
@@ -24,6 +24,18 @@
 	],
 	"images": [
 		"RadiantPlanetDefense_960x640_18.png"
+	]
+},
+{
+	"title":"CubeClimber",
+	"description":"A simple game made in Unity which only goal is to climb cubes and reach the top. It's currently in development and therefore not yet finished.<br /><br />Use WASD and the mouse for movement. Use 'E' to build blocks.",
+	"tags": "Unity, C#, UnityScript, Games",
+	"location": [
+		"http://github.com/bnji/CubeClimber",
+		"http://bit.ly/1Khn8Sj"
+	],
+	"images": [
+		"cubeclimber.png"
 	]
 },
 {
@@ -121,18 +133,6 @@
 	],
 	"images": [
 		"codewithme1.gif"
-	]
-},
-{
-	"title":"CubeClimber",
-	"description":"A simple game made in Unity which only goal is to climb cubes and reach the top. It's currently in development and therefore not yet finished.<br /><br />Use WASD and the mouse for movement. Use 'E' to build blocks.",
-	"tags": "Unity, C#, UnityScript",
-	"location": [
-		"http://github.com/bnji/CubeClimber",
-		"http://bit.ly/1Khn8Sj"
-	],
-	"images": [
-		"cubeclimber.png"
 	]
 },
 {

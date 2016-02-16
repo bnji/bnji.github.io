@@ -69,7 +69,7 @@ $(function() {
 var Bendot = {
   show : function(keyword) {
     $.each(objects, function(k, v) {
-      var tags = v.Get('tags').trim().toLowerCase().split(',');//.split(/[\s,]+/);
+      var tags = v.Get('tags').trim().toLowerCase().split(', ');//.split(/[\s,]+/);
       v.Hide();
       if(keyword.toLowerCase() === "all" || _.contains(tags, keyword.toLowerCase())) {
         v.Show();
@@ -124,8 +124,8 @@ var Bendot = {
     $(viewId + " #tags").html("Tags: <b>" + obj.Get('tags') + "</b>");
     $(viewId + " a").attr('href', obj.Get('location')).text(obj.Get('location'));
 
-    var objTags = obj.Get('tags').trim().split(',');
-    // console.log(objTags);
+    var objTags = obj.Get('tags').trim().split(', ');
+    console.log(objTags);
     $.each(objTags, function(k,v) {
       if(!_.contains(tags, v)){
         tags.push(v);
