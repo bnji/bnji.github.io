@@ -11,34 +11,36 @@ $(function() {
   //   var topMargin = 20;
   //   $(window).on('scroll', function(event) {
   //       var scrollTop = $(window).scrollTop();
+  //       // if(scrollTop > followScroll.offset().top + topMargin) {
   //       // console.log(scrollTop + " - " + followScroll.offset().top);
-  //       followScroll.stop(false, false).animate({
-  //           top: scrollTop < originalY
+  //       followScroll.offset().top(scrollTop < originalY
   //                   ? 0
-  //                   : scrollTop - originalY + topMargin
-  //       }, 30);
+  //                   : scrollTop - originalY + topMargin);
+  //       // }
   //   });
   // }
 
-  // addScroll('.follow-scroll-1');
-  //
-  $('.follow-scroll').each(function() {
-    // $(this).affix({
-    //     offset: {
-    //         top: function(e) {
-    //             var $curSection = $(e).closest('.row');
-    //             return (this.top = $curSection.offset().top - 10);
-    //         },
-    //         bottom: function (e) {
-    //             var $nextSection = $(e).closest('section').next('section');
-    //             //if last element, go to bottom of page
-    //             var bottom = ($nextSection.length === 0) ? 0 :
-    //                          $(document).height() - $nextSection.offset().top;
-    //             return (this.bottom = bottom);
-    //         }
-    //     }
-    // });
-  });
+  // addScroll('#follow-scroll-1');
+  // addScroll('#follow-scroll-2');
+
+  // $('.follow-scroll').each(function() {
+  //   // console.log($(this).affix().offset.top;
+  //   $(this).affix({
+  //       offset: {
+  //           top: function(e) {
+  //               var $curSection = $(e).closest('.row');
+  //               return (this.top = $curSection.offset().top - 10);
+  //           },
+  //           bottom: function (e) {
+  //               var $nextSection = $(e).closest('section').next('section');
+  //               //if last element, go to bottom of page
+  //               var bottom = ($nextSection.length === 0) ? 0 :
+  //                            $(document).height() - $nextSection.offset().top;
+  //               return (this.bottom = bottom);
+  //           }
+  //       }
+  //   });
+  // });
 
 
 

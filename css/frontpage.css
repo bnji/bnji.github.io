@@ -226,6 +226,17 @@ a.link-noeffect:hover {
   -o-background-size: cover;
   background-size: cover;
 }
+.follow-scroll {
+  position: relative;
+}
+.affix {
+  position: fixed !important;
+  top: 10px;
+}
+.affix-top,
+.affix-bottom {
+  position: relative;
+}
 /* Intro */
 .intro {
   padding-top: 25px;
@@ -249,9 +260,6 @@ h4 {
 }
 p {
   font-family: "Merriweather";
-}
-.follow-scroll {
-  position: relative;
 }
 .profile-picture {
   width: 125px;
